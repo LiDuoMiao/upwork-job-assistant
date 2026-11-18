@@ -1,0 +1,9 @@
+.DS_Store
+/.env
+/.env.*
+/config/profile.md
+/config/preferences.yaml
+/reports/
+/state/*
+!/state/job-history.example.json
+!/state/run-state.example.json

@@ -1,0 +1,103 @@
+version: "1.0"
+
+# Example settings for software development. Adapt search terms and priorities to your profile.
+search:
+  include_best_match_feed: true
+  keyword_queries:
+    - "API integration automation"
+    - "backend development"
+    - "internal tool development"
+  title_queries:
+    - "Backend developer"
+    - "Full stack developer"
+  max_candidates_for_detail: 8
+  max_recommendations: 5
+
+incremental_search:
+  state_files:
+    run_state: state/run-state.json
+    job_history: state/job-history.json
+  first_run_lookback_days: 7
+  overlap_hours: 12
+  max_regular_lookback_days: 7
+  pagination:
+    page_size: 10
+    max_pages_per_route: 3
+  carryover:
+    reminder_days: 7
+    max_detail_rechecks_per_run: 5
+    recheck_statuses:
+      - recommended
+      - conditional
+      - watch
+  deep_backfill:
+    enabled: true
+    interval_days: 7
+    lookback_days: 14
+    max_pages_per_route: 5
+
+project_preferences:
+  job_types:
+    - hourly
+    - fixed
+  preferred_skills: []
+  preferred_project_types: []
+  lower_priority_project_types: []
+  # Set solo, team, or either. Use null to defer to the profile and the current request.
+  delivery_mode: null
+  # Confirm current availability, communication options, and portfolio links before applying.
+  availability_hours_per_week: null
+  communication_modes: []
+  portfolio_links: []
+
+commercial_assumptions:
+  # Use null for unset values. Supply your own rates and budget floors.
+  profile_hourly_rate_usd: null
+  hourly_rate_soft_floor_usd: null
+  fixed_budget_soft_floor_usd: null
+
+connects_strategy:
+  # Enter a verified price per Connect to estimate out-of-pocket cost.
+  cost_per_connect_usd: null
+  # Optional threshold for explaining whether a higher application cost is justified.
+  elevated_cost_threshold: null
+  recommend_boost: false
+
+earnings_estimation:
+  currency: USD
+  # Leave fees unset to show gross earnings and flag net earnings as unconfirmed.
+  upwork_service_fee_min_percent: null
+  upwork_service_fee_max_percent: null
+
+hard_exclusions:
+  - already_applied
+  - inactive_or_closed_job
+  - cannot_apply
+  - explicit_eligibility_requirement_not_met
+  - request_requires_false_claims_or_policy_violation
+  - clearly_unrelated_role
+
+scoring:
+  total: 100
+  dimensions:
+    technical_match: 35
+    delivery_confidence: 20
+    budget_and_value: 15
+    client_quality: 15
+    timing_and_competition: 10
+    requirement_clarity: 5
+  levels:
+    strongly_recommend: 80
+    consider: 65
+    low_priority: 50
+
+output:
+  language: en
+  # List one language, or put the review language before the submission language.
+  proposal_languages:
+    - en
+  include_proposal_draft_for:
+    - strongly_recommend
+    - consider
+  report_directory: reports
+  include_compact_calibration_appendix: true
