@@ -1,6 +1,6 @@
 # Upwork 项目筛选助手
 
-[English](README.md)
+[<kbd>中文</kbd>](README.zh-CN.md) · [<kbd>English</kbd>](README.md)
 
 一个通过 Upwork 官方 MCP 搜索和评估软件开发职位的 Agent Skill。它根据使用者填写的技能、项目经历、报价和交付偏好筛选职位，输出本地 Markdown 报告。报告包含推荐理由、预计工时和收益、主要风险、Connects 成本，以及符合条件项目的 Proposal 草稿。
 

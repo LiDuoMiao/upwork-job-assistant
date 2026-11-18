@@ -1,6 +1,6 @@
 # Upwork Job Assistant
 
-[Simplified Chinese](README.zh-CN.md)
+[<kbd>中文</kbd>](README.zh-CN.md) · [<kbd>English</kbd>](README.md)
 
 An agent skill for finding and evaluating software development jobs through the official Upwork MCP. It uses your skills, experience, rates, and delivery preferences to produce a local Markdown report with recommendations, estimated effort and earnings, Connects costs, and proposal drafts.
 
